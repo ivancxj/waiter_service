@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-waiter_id = 'waiter_id_1'
+waiter_id = '3890dcc5e27dfa405660e84b6fc1bd42'
 opt = {}
 opt[:waiter_id] = waiter_id
 opt[:service_quality] = 100
@@ -20,4 +20,7 @@ opt[:work_to] = 123123123
 opt[:work_status] = 1
 waiter = Waiter.new(opt)
 waiter.save
+
+
+
 

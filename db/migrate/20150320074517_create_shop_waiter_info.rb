@@ -3,8 +3,7 @@ class CreateShopWaiterInfo < ActiveRecord::Migration
   def change
     create_table :shop_waiter_info, comment: '服务员在一个店铺下的资料' do |t|
       t.string :waiter_id, limit: 32, comment: '用户中心的user_id', null: false
-      t.string :shop_id, limit: 32, comment: '店铺中心的shop_id', null: false
-      t.string :entity_id, limit: 32, comment: '店铺中心的entity_id', null: false
+      t.string :shop_entity_id, limit: 32, comment: '店铺中心的entity_id', null: false
 
       begin '店铺备注'
       t.string :mobile, limit: 13, comment: '手机号'
@@ -24,6 +23,6 @@ class CreateShopWaiterInfo < ActiveRecord::Migration
       # t.datetime :opt_time
     end
 
-    add_index :shop_waiter_info, [:waiter_id, :shop_id], name: 'shop_waiter_info_waiter_id_shop_id'
+    add_index :shop_waiter_info, [:waiter_id, :shop_entity_id], name: 'shop_waiter_info_waiter_id_shop_id'
   end
 end
