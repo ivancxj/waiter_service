@@ -22,5 +22,11 @@ waiter = Waiter.new(opt)
 waiter.save
 
 
+opt = {}
+opt[:shop_entity_id] = '00000291'
+shopWaiter = ShopWaiter.new
+
+
+
 
 
