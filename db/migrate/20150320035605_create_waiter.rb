@@ -10,8 +10,8 @@ class CreateWaiter < ActiveRecord::Migration
       t.integer :experience, default: 0, comment: '成长值数量'
       t.integer :beans_count, default: 0, comment: '火豆子数量'
       begin '上下班'
-      t.integer :work_from, comment: '设置每天上班时间,是上班时间到00:00的秒数'
-      t.integer :work_to, comment: '设置每天下班时间,是下班时间到00:00的秒数'
+      t.datetime :work_from, comment: '设置每天上班时间'
+      t.datetime :work_to, comment: '设置每天下班时间'
       t.integer :work_status, limit: 1, default: 0, comment: '0: 下班状态, 1: 上班状态'
       t.integer :auto_work, limit: 1, default: 0, comment: '0: 手动上下班 1: 自动上下班'
       end
