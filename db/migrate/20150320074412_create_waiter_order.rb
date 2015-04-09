@@ -7,8 +7,10 @@ class CreateWaiterOrder < ActiveRecord::Migration
 
       t.decimal :order_amount, precision: 10, scale: 2, default: 0.00, comment: '订单总额'
       t.integer :get_experience, limit: 1, default: 0, comment: '是否已获得该订单的成长值 0: 未获得, 1:已获得'
+      t.integer :all_comment, limit: 1, default: 0, comment: '是否已全部已评论 0: 否, 1:是'
+      t.string  :pay_user_ids, limit: 660, default: '', comment: '这笔订单支付过的人ids,以,分割'
       t.integer :beans_count, default: 0, comment: '该笔订单获取的火豆子数量'
-      t.datetime :pay_at, comment: '可以评价开始时间'
+      t.datetime :complete_at, comment: '订单完成时间,开始自动评价记时'
 
       t.timestamps
       # t.datetime :create_time

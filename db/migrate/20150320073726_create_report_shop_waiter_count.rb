@@ -9,7 +9,7 @@ class CreateReportShopWaiterCount < ActiveRecord::Migration
       t.integer :comments_good_count, default: 0, comment: '被好评价次数'
       t.integer :comments_bad_count, default: 0, comment: '被差评价次数'
       t.integer :experience, default: 0, comment: '成长值数量'
-      t.integer :year_month, default: 0, comment: '年月'
+      t.integer :yyyy_mm, default: 0, comment: '年月'
 
       t.timestamps
       # t.datetime :create_time
